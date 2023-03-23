@@ -1,8 +1,19 @@
 const { createApp } = Vue
 createApp({
-  data() {
-    return {
-      message: 'Hello Vue!'
+    data() {
+        return {
+            numeroMail: []
+        }
+    },
+
+    //ciclo che crea 10 email random e le pusha dentro l'array vuoto
+    mounted: function () {
+        for (let i = 0; i < 10; i++) {
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+            .then((result)  => {
+                this.numeroMail.push(result.data.response);
+            });
+        }
+        console.log(this.numeroMail);
     }
-  }
 }).mount('#app')
