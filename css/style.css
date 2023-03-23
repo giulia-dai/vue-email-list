@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: linear-gradient(to bottom right, white,rgb(121, 180, 244), rgb(107, 222, 132));
+    background-repeat: no-repeat;
+}
+
 .container{
     width: 1000px;
     margin: 40px auto;
@@ -11,6 +16,7 @@
     border: 1px solid black;
     box-shadow: 1px 2px 5px;
 }
+
 h1{
     text-align: center;
     padding-top: 15px;
@@ -28,7 +34,9 @@ li{
     border-radius: 50px ;
     margin: 5px;
     padding: 10px;
-    border: 1px dotted black;
+    border: 2px dotted black;
+    width: 300px;
+    text-align: center;
 }
 
 li:hover{
